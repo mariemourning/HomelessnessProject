@@ -49,11 +49,12 @@ VALUES
 SELECT SUM(count) FROM homelessness
 WHERE state NOT IN ('GU','VI')
 AND year = '2016-01-01'
+AND measures = 'Total Homeless'
 
 INSERT INTO homelessness
 	(year, state, measures, count)
 VALUES
-	('2016-01-01', 'US', 'Total Homeless', 2825874)
+	('2016-01-01', 'US', 'Total Homeless', 548502)
 	
 -- Finally finding percent homeless for the country in 2016	
 SELECT count AS total_homeless, state_info.twentysixteen_pop AS total_pop, 
